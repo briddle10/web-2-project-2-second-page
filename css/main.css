@@ -85,29 +85,20 @@ body {
 	color: rgba(80,80,80,1);
   }
   
-  .carousel{
+  #focusTiger {
 	position: relative;
-	background: white;
-	height: 50vh;
-	width: 95%;
-	margin: 10px auto 0 auto;
 	display: flex;
-	flex-flow: column nowrap;
-  }
-  
-  .carousel div:nth-child(1) {
-	display: flex;
-	margin: 10px 10px 10px 10px;
 	height: 100%;
-	z-index: 0;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
 	background: url('https://kids.nationalgeographic.com/content/dam/kids/photos/articles/Other%20Explore%20Photos/R-Z/Wacky%20Weekend/Wild%20Cats/ww-wild-cats-tiger.adapt.945.1.jpg');
 	background-size: cover;
 	background-position: center;
-	flex-flow: column nowrap;
-	justify-content: flex-end;
+	grid-area: 1 / 1 / span 2 / span 3;
+	border: 1px solid red;
   }
   
-  .carousel div div {
+  #focusTiger div {
 	display: flex;
 	height: 70px;
 	background: rgba(80,80,80,.7);
@@ -116,17 +107,17 @@ body {
 	align-items: center;
   }
   
-  .carousel div img:nth-child(1) {
+  #focusTiger img:nth-child(1) {
 	position: absolute;
 	left: -14px;
-	top: 31%;
+	top: 40%;
 	height: 70px;
   }
   
-  .carousel div img:nth-child(2) {
+  #focusTiger img:nth-child(2) {
 	position: absolute;
 	right: -14px;
-	top: 31%;
+	top: 40%;
 	height: 70px;
   }
   
@@ -168,7 +159,7 @@ body {
   }
   
   .gallery{
-	margin: 0 auto 0 auto;
+	margin: 0 auto 0px auto;
 	width: 93.5%;
 	background: none;
 	display: flex;
@@ -451,12 +442,24 @@ body {
 
 
 
+	#galleryTitle{
+		margin: 20px 0px 10px 70px;
+		float: left;
+		font-size: 30px;
+		font-weight: 100;
+	}
+
+
+	
+
 
 #student-feature {
+	height: 700px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr) 2fr;
 	grid-template-rows: repeat(3, 1fr); 
-	grid-gap: 10px;
+	grid-gap: 20px;
+	margin: 20px;
 }
 
 #picture {
@@ -477,7 +480,7 @@ body {
 
 
 #position-one {
-	background: url('https://images.unsplash.com/photo-1415369629372-26f2fe60c467?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80');
+	background: url('https://media.giphy.com/media/xULW8y5CDynhoSOwVy/giphy.gif');
 	background-position: center;
 	background-size: cover;
 	grid-column-start: 1 ;
@@ -487,9 +490,7 @@ body {
 }
 
 #position-two {
-	background: url('https://images.unsplash.com/photo-1415369629372-26f2fe60c467?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80');
-	background-position: center;
-	background-size: cover;
+	object-fit: cover;
 	grid-column-start: 2 ;
 	grid-column-end: 3;
 	grid-row-start: 3; 
@@ -497,7 +498,7 @@ body {
 }
 
 #position-three {
-	background: url('https://images.unsplash.com/photo-1415369629372-26f2fe60c467?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80');
+	background: url('https://i.gifer.com/VpHw.gif');
 	background-position: center;
 	background-size: cover;
 	grid-column-start: 3 ;
@@ -507,19 +508,78 @@ body {
 }
 
 #bio {
-	background: red;
+	background: none;
 	grid-column-start: 4 ;
 	grid-column-end: 5;
 	grid-row-start: 1; 
 	grid-row-end: 2;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+#bio div:nth-child(1) {
+	width: 210px;
+	display: flex;
+	align-content: center;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+}
+
+#bio div:nth-child(1) h2 {
+	font-size: 22px;
+	text-align: end;
+	color: rgba(80,80,80,1);
+	margin: 0px 10px 10px 0px;
+}
+
+#bio div:nth-child(1) p {
+	font-size: 18px;
+	text-align: end;
+	margin: 0px 10px 10px 0px;
+}
+
+#bio div:nth-child(1) a {
+	text-align: end;
+	margin: 0px 0px 10px 0px;
+	height: 30px;
+}
+
+#bio div:nth-child(1) img {
+	align-self: flex-end;
+	margin: 0px 10px 0px 0px;
+	height: 100%;
+}
+
+#bio div:nth-child(2) {
+	width: 30%;
+	justify-content: flex-end;
+}
+
+#bio div:nth-child(2) img{
+	width: 100%;
+	text-align: end;
 }
 
 #project-detail {
-	background: blue;
+	background: none;
 	grid-column-start: 4 ;
 	grid-column-end: 5;
 	grid-row-start: 2; 
 	grid-row-end: 4;
+}
+
+#project-detail h2 {
+	font-size: 36px;
+	color: rgba(80,80,80,1);
+	margin: 0px 0px 5px 0px;
+}
+
+#project-detail p {
+	font-size: 18px;
+	color: rgba(80,80,80,1);
+	margin: 0px 0px 20px 0px;
 }
 
 
